@@ -1,0 +1,20 @@
+<div class="p-10"> 
+You have reviewed <%= Article.public_count %> books!
+
+<h1 class="font-bold text-center">Book Reviews</h1>
+<div class="pt-10 text-left grid grid-cols-1 md:grid-cols-2 gap-10">
+  <% @articles.each do |article| %>
+    <% unless article.archived? %>
+    <div>
+      <h1 class="font-bold"><%= link_to article.title, article %></h1>
+      <p><%= article.rating%> stars</p>
+      <p><%= article.created_at.strftime("%B %d %Y") %></p>
+      <p><%= article.body.truncate_words(25) %></p>
+      <p><%= link_to "See More", article %></p>
+    </div>
+    <% end %>
+  <% end %>
+</div>
+</div> 
+
+
