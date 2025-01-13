@@ -58,4 +58,4 @@ end
 
 gem 'rails_live_reload'
 
-gem "tailwindcss-rails", "~> 3.0"
+gem "tailwindcss-rails", "~> 3.2"
